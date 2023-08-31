@@ -10,9 +10,9 @@ func main() {
 
 	router := gin.Default()
 
-	router.GET("/fakeData", fakeData)
+	router.GET("/fakeData", fakeData) // http://localhost:9090/fakeData
 
-	router.Run()
+	router.Run(":9090") // localhost:9090
 }
 
 type words struct {
@@ -21,15 +21,15 @@ type words struct {
 	TitleTr  string `json:"tr`
 }
 
-var word = []words{
+var dictionary = []words{
 	{ID: "1", TitleEng: "hello", TitleTr: "merhaba"},
 	{ID: "2", TitleEng: "cat", TitleTr: "kedi"},
 	{ID: "3", TitleEng: "car", TitleTr: "araba"},
-	{ID: "4", TitleEng: "door", TitleTr: "kapı"},
+	{ID: "", TitleEng: "door", TitleTr: "kapı"},
 }
 
 func fakeData(c *gin.Context) {
 
-	c.JSON(http.StatusOK, word)
+	c.JSON(http.StatusOK, dictionary)
 
 }
