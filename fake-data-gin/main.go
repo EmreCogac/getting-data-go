@@ -16,16 +16,16 @@ func main() {
 }
 
 type words struct {
-	ID       string `json:"id"`
-	TitleEng string `json:"eng"`
-	TitleTr  string `json:"tr`
+	ID  string `json:"id"`
+	Eng string `json:"eng"`
+	Tr  string `json:"tr`
 }
 
 var dictionary = []words{
-	{ID: "1", TitleEng: "hello", TitleTr: "merhaba"},
-	{ID: "2", TitleEng: "cat", TitleTr: "kedi"},
-	{ID: "3", TitleEng: "car", TitleTr: "araba"},
-	{ID: "", TitleEng: "door", TitleTr: "kapı"},
+	{ID: "1", Eng: "hello", Tr: "merhaba"},
+	{ID: "2", Eng: "cat", Tr: "kedi"},
+	{ID: "3", Eng: "car", Tr: "araba"},
+	{ID: "4", Eng: "door", Tr: "kapı"},
 }
 
 func fakeData(c *gin.Context) {
