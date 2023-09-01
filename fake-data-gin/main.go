@@ -17,15 +17,15 @@ func main() {
 
 type words struct {
 	ID  string `json:"id"`
-	Eng string `json:"eng"`
-	Tr  string `json:"tr`
+	ENG string `json:"eng"`
+	TR  string `json:"tr"`
 }
 
 var dictionary = []words{
-	{ID: "1", Eng: "hello", Tr: "merhaba"},
-	{ID: "2", Eng: "cat", Tr: "kedi"},
-	{ID: "3", Eng: "car", Tr: "araba"},
-	{ID: "4", Eng: "door", Tr: "kapı"},
+	{ID: "1", ENG: "hello", TR: "merhaba"},
+	{ID: "2", ENG: "cat", TR: "kedi"},
+	{ID: "3", ENG: "car", TR: "araba"},
+	{ID: "4", ENG: "door", TR: "kapı"},
 }
 
 func fakeData(c *gin.Context) {
